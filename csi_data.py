@@ -4,7 +4,7 @@
 #         https://www.newsolarhomes.org/WebPages/Public/Reports.aspx
 
 import xlrd
-
+import agate
 book = xlrd.open_workbook('NSHP.xlsx')
 sheet = book.sheet_by_name('NSHP')
 data = [
@@ -12,4 +12,10 @@ data = [
 for c in range(sheet.ncols)
 for r in range(sheet.nrows)
 ]
-print type(data)
+
+
+
+# psuedocode:
+# if zip code columne == 8888:
+	# run mean function on col_values(colx,)
+	# print and eventually write to notebook
